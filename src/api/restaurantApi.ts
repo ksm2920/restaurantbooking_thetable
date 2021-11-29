@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from "axios";
 
 const restaurantApi: AxiosInstance = axios.create({
-  baseURL: "https://restaurang-booking-app.herokuapp.com/",
+  baseURL: "https://restaurang-booking-app.herokuapp.com",
   headers: {
     "Content-Type": "application/json",
   },
