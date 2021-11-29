@@ -1,0 +1,109 @@
+.modal {
+  position: absolute;
+  background-color: rgb(50, 50, 50);
+  margin: 0 auto;
+  width: 91vw;
+  border-radius: 15px;
+  top: 14vh;
+}
+
+.modal-title {
+  top: 10px;
+}
+
+h1 {
+  margin: 10px;
+}
+
+h3 {
+  margin: 0;
+  padding-left: 5px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.modal-header {
+  padding: 20px;
+}
+
+.modal-body,
+.modal-footer {
+  padding: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+[disabled] {
+  color: gray;
+}
+
+.radio {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+
+#time18,
+#time21 {
+  cursor: pointer;
+}
+
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgb(50, 50, 50);
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.empty-btn {
+  background-color: rgb(50, 50, 50);
+  color: orange;
+  border: 2px solid orange;
+  border-radius: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.full-btn {
+  background-color: orange;
+  color: white;
+  border: 2px solid orange;
+  border-radius: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  
+  h1 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .modal {
+    width: 50vw;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+}

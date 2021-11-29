@@ -1,0 +1,128 @@
+.home {
+  padding: 50px;
+}
+
+.logo-img {
+  height: 10vh;
+  line-height: 10vh;
+}
+
+.bookingLink {
+  padding: auto;
+  margin: 100px auto;
+  background-color: orange;
+  height: 35vh;
+  width: 35vh;
+  -webkit-animation: rotation 0.9s;
+  -moz-animation: rotation 0.9s;
+  -o-animation: rotation 0.9s;
+  animation: rotation 0.9s;
+}
+
+.bookingLink:hover {
+  transform: scale(1.1);
+}
+
+#book,
+#table,
+#here {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  line-height: 5vh;
+}
+
+#book {
+  font-size: 80px;
+}
+
+#table {
+  font-size: 40px;
+}
+
+#here {
+  font-size: 60px;
+}
+
+.links {
+  height: 10vh;
+  line-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 768px) {
+  .bookingLink {
+    height: 43vh;
+    width: 43vh;
+    margin: 80px auto;
+  }
+
+  #book,
+  #table,
+  #here {
+    line-height: 6vh;
+  }
+
+  #book {
+    font-size: 90px;
+  }
+
+  #table {
+    font-size: 50px;
+  }
+
+  #here {
+    font-size: 70px;
+  }
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  from {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes rotation {
+  from {
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}

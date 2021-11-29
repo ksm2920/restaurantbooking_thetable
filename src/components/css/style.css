@@ -1,0 +1,211 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.back {
+  text-align: left;
+  padding: 10px 0;
+}
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: left;
+}
+
+button {
+  background-color: black;
+  border: none;
+  color: white;
+}
+
+button:disabled {
+  color: gray;
+}
+
+.decrease {
+  position: absolute;
+  top: 65px;
+  left: 230px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.increase {
+  position: absolute;
+  top: 65px;
+  left: 260px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.total {
+  text-align: left;
+  padding: 5px;
+}
+
+.total > a {
+  float: right;
+}
+
+.notification {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.envelope {
+  font-size: 30px;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  padding: 4px 10px;
+  border-radius: 50%;
+  background: orange;
+  color: white;
+  font-size: 15px;
+}
+
+.add {
+  text-align: right;
+  padding: 0.5em;
+}
+
+.add-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.list {
+  padding: 1em;
+  list-style: none;
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.guest {
+  font-size: 12px;
+  padding-right: 5px;
+}
+
+.edit-icon {
+  cursor: pointer;
+}
+
+.delete-icon {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+input[disabled] {
+  color: white;
+  border: 2px solid gray;
+  background-color: darkgray;
+}
+
+.edit {
+  float: right;
+  cursor: pointer;
+}
+
+th {
+  padding: 10px 20px;
+  border-top: 1px solid white;
+  text-align: left;
+  cursor: pointer;
+}
+
+.detail {
+  text-align: left;
+}
+
+.text-box {
+  background-color: white;
+  padding: 20px;
+  color: black;
+  border-radius: 5px;
+}
+
+.arrow {
+  padding: 5px;
+}
+
+.isread {
+  color: gray;
+}
+
+.isread > button {
+  color: gray;
+}
+
+.notread {
+  color: white;
+}
+
+.error {
+  color: orange;
+  margin: 0;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 600px) {
+  .increase {
+    left: 330px;
+  }
+
+  .decrease {
+    left: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .increase {
+    left: 390px;
+  }
+
+  .decrease {
+    left: 360px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 50vw;
+  }
+  .increase {
+    left: 530px;
+  }
+
+  .decrease {
+    left: 500px;
+  }
+
+  .delete-icon {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .increase {
+    left: 730px;
+  }
+
+  .decrease {
+    left: 700px;
+  }
+}
