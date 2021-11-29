@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import restaurantApi from "../api/restaurantApi";
 import { DeleteModal } from "../modals/DeleteModal";
 import Booking from "../models/Booking";
-import { useHistory } from "react-router-dom";
 import Contact from "../models/Contact";
-import "./css/style.css";
 import "./css/preloader.css";
+import "./css/style.css";
 
 export const AdminPage = () => {
-  let dateNow = new Date().toDateString();
+  let dateNow = new Date().toJSON().slice(0, 10);
   const history = useHistory();
   const [bookings, setBookings] = useState([] as Booking[]);
   const [contacts, setContacts] = useState([] as Contact[]);
@@ -17,13 +17,6 @@ export const AdminPage = () => {
   const [completed, setcompleted] = useState(false);
   const [deleteBookingId, setDeleteBookingId] = useState<string>();
 
-  let currentDate = new Date(date);
-  let numberOfMlSeconds = currentDate.getTime();
-  let dayToMlSeconds = 24 * 60 * 60 * 1000;
-  let previousDate = new Date(
-    numberOfMlSeconds - dayToMlSeconds
-  ).toDateString();
-  let nextDate = new Date(numberOfMlSeconds + dayToMlSeconds).toDateString();
   let totalNoOfPeople = bookings.reduce(
     (acc, curr) => acc + curr.NoOfPeople,
     0
@@ -42,13 +35,14 @@ export const AdminPage = () => {
       setBookings(response.data as Booking[]);
       setContacts(rs.data as Contact[]);
       setcompleted(true);
-    }, 1000);
+    },);
   };
 
   useEffect(() => {
     console.log("AdminPage.useEffect called");
     fetchData();
     console.log(bookings);
+    console.log(date);
   }, [date]);
 
   const getEditForm = (booking: Booking) => {
@@ -68,6 +62,12 @@ export const AdminPage = () => {
     let date = new Date(datestr);
     return date.toLocaleTimeString("sv-SE", { timeStyle: "short" });
   }
+
+
+  const onDateChange = (e: any) => {
+    setDate(e.target.value)
+    // validateDate();
+  };
 
   let divTag = bookings.map((booking) => {
     return (
@@ -98,30 +98,8 @@ export const AdminPage = () => {
     <div className="container">
       <div className="back">
         <a href={"/"} data-testid="admin">
-          <i className="fas fa-chevron-left"></i> Admin
+          <i className="fas fa-chevron-left back-arrow"></i> Admin
         </a>
-      </div>
-      <div>
-        <h2>
-          {date}
-          <button
-            onClick={() => setDate(previousDate)}
-            disabled={date === dateNow}
-            className="decrease"
-          >
-            <i className="fas fa-chevron-left"></i>
-          </button>
-          <button
-            onClick={() => setDate(nextDate)}
-            className="increase"
-            data-testid="increment"
-          >
-            <i className="fas fa-chevron-right"></i>
-          </button>
-        </h2>
-      </div>
-      <p className="total">
-        Total: {bookings.length} bookings and {totalNoOfPeople} people
         <a href="/message" className="notification">
           <span>
             <i className="fas fa-envelope envelope"></i>
@@ -132,7 +110,18 @@ export const AdminPage = () => {
             <span className="badge">{unreadCount}</span>
           )}
         </a>
+      </div>
+      <div>
+        <input
+          type="date"
+          value={date}
+          onChange={onDateChange}
+        />
+      </div>
+      <p className="total">
+        Total: {bookings.length} bookings and {totalNoOfPeople} people
       </p>
+
       <div className="add">
         <button
           onClick={routeChange}

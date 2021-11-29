@@ -15,7 +15,11 @@ a {
 
 .container {
   width: 90vw;
-  margin: 0 auto;
+  margin: 10px auto;
+}
+
+.back-arrow {
+  padding-right: 10px;
 }
 
 h2 {
@@ -35,7 +39,7 @@ button:disabled {
 .decrease {
   position: absolute;
   top: 65px;
-  left: 230px;
+  left: 60%;
   font-size: 20px;
   cursor: pointer;
 }
@@ -43,50 +47,51 @@ button:disabled {
 .increase {
   position: absolute;
   top: 65px;
-  left: 260px;
+  left: 65%;
   font-size: 20px;
   cursor: pointer;
 }
 
 .total {
   text-align: left;
-  padding: 5px;
-}
-
-.total > a {
-  float: right;
+  padding-left: 5px;
+  margin: 0;
+  font-size: 14px;
 }
 
 .notification {
+  float: right;
   color: white;
   text-decoration: none;
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
   cursor: pointer;
+  padding-right: 0.5em;
 }
 
 .envelope {
-  font-size: 30px;
+  font-size: 23px;
 }
 
 .notification .badge {
   position: absolute;
-  top: -10px;
-  right: -15px;
-  padding: 4px 10px;
+  top: -6px;
+  right: -4px;
+  padding: 2px 7px;
   border-radius: 50%;
   background: orange;
   color: white;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .add {
   text-align: right;
   padding: 0.5em;
+  /* border-bottom: 1px solid white; */
 }
 
 .add-icon {
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -165,21 +170,21 @@ th {
 
 @media screen and (min-width: 600px) {
   .increase {
-    left: 330px;
+    left: 50%;
   }
 
   .decrease {
-    left: 300px;
+    left: 45%;
   }
 }
 
 @media screen and (min-width: 768px) {
   .increase {
-    left: 390px;
+    left: 45%;
   }
 
   .decrease {
-    left: 360px;
+    left: 41%;
   }
 }
 
@@ -188,11 +193,11 @@ th {
     width: 50vw;
   }
   .increase {
-    left: 530px;
+    left: 50%;
   }
 
   .decrease {
-    left: 500px;
+    left: 48%;
   }
 
   .delete-icon {
@@ -202,10 +207,11 @@ th {
 
 @media screen and (min-width: 1200px) {
   .increase {
-    left: 730px;
+    left: 44%;
   }
 
   .decrease {
-    left: 700px;
+    left: 43%;
   }
 }
+

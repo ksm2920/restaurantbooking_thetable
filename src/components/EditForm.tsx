@@ -163,7 +163,7 @@ export const EditForm = () => {
     <div className="container">
       <div className="back">
         <a href={"/admin"}>
-          <i className="fas fa-chevron-left"></i> Edit form
+          <i className="fas fa-chevron-left back-arrow"></i> Edit form
         </a>
       </div>
       <div>

@@ -1,5 +1,5 @@
-import "./css/home.css";
 import Table_logo from "./assets/The_Table_logo.png";
+import "./css/home.css";
 
 export const Home = () => {
   return (

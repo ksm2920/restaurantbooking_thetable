@@ -43,7 +43,7 @@ export const MessageDetail = () => {
     <div className="container">
       <div className="back">
         <a href={"/message"}>
-          <i className="fas fa-chevron-left"></i> Message detail
+          <i className="fas fa-chevron-left back-arrow"></i> Message detail
         </a>
       </div>
       <div className="detail">

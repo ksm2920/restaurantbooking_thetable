@@ -3,7 +3,7 @@ export const NotFound = () => {
     <div style={{ width: "90vw", margin: "0 auto" }}>
       <div className="back">
         <a href={"/"}>
-          <i className="fas fa-chevron-left"></i> Home
+          <i className="fas fa-chevron-left back-arrow"></i> Home
         </a>
       </div>
       <h1>Not Found</h1>

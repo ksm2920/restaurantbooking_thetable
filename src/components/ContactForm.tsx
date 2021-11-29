@@ -69,7 +69,7 @@ const ContactForm = (props: ContactFormProps) => {
     <div className="container">
       <div className="back">
         <a href={"/"} data-testid="admin">
-          <i className="fas fa-chevron-left"></i> Contac us
+          <i className="fas fa-chevron-left back-arrow"></i> Contac us
         </a>
       </div>
       <p>Please Contact Us Using the Form Below</p>

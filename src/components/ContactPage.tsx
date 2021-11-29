@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import restaurantApi from "../api/restaurantApi";
-import ContactForm from "./ContactForm";
 import ErrorResponse from "../models/ErrorResponse";
+import ContactForm from "./ContactForm";
 
 const ContactPage = () => {
   const [isSent, setIsSent] = useState(false);

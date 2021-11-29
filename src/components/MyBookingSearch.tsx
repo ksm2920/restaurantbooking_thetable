@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import SearchRequest from "../models/SearchRequest";
 import restaurantApi from "../api/restaurantApi";
-import SearchInfo from "../models/SearchInfo";
-import Booking from "../models/Booking";
-import BookingForm from "./BookingForm";
-import ErrorResponse from "../models/ErrorResponse";
-import "./css/style.css";
 import "../modals/css/modal_style.css";
+import Booking from "../models/Booking";
+import ErrorResponse from "../models/ErrorResponse";
+import SearchInfo from "../models/SearchInfo";
+import SearchRequest from "../models/SearchRequest";
+import BookingForm from "./BookingForm";
+import "./css/style.css";
 
 const initialData: SearchInfo[] = [];
 const initialSelectedSlot: SearchInfo = {
@@ -16,9 +16,8 @@ const initialSelectedSlot: SearchInfo = {
 };
 
 const MyBookingSearch = () => {
-  var curr = new Date();
-  var dt = curr.toDateString();
-  const [bookingDate, setBookingDate] = useState(dt);
+  let dateNow = new Date().toJSON().slice(0, 10);
+  const [bookingDate, setBookingDate] = useState(dateNow);
   //const [dataSaved, setDataSaved] = useState(false);
   const [peopleCount, setPeopleCount] = useState(0);
   const [searchData, setSearchData] = useState(initialData);
@@ -41,10 +40,8 @@ const MyBookingSearch = () => {
     return valid;
   };
 
-  const onDateChange = (diff: number) => {
-    const dt = new Date(bookingDate);
-    dt.setDate(dt.getDate() + diff);
-    setBookingDate(dt.toDateString());
+  const onDateChange = (e: any) => {
+    setBookingDate(e.target.value)
   };
 
   const onNumberOfPeopleChange = (e: any) => {
@@ -83,25 +80,16 @@ const MyBookingSearch = () => {
       <div className="container">
         <div className="back">
           <a href={"/"}>
-            <i className="fas fa-chevron-left"></i> Booking Page
+            <i className="fas fa-chevron-left back-arrow"></i> Booking Page
           </a>
         </div>
         <div>
           <div>
-            <h2>
-              {bookingDate}
-              {/* {date === dateNow? <span>(Today)</span> : ""} */}
-              <button
-                onClick={() => onDateChange(-1)}
-                disabled={bookingDate === new Date().toDateString()}
-                className="decrease"
-              >
-                <i className="fas fa-chevron-left"></i>
-              </button>
-              <button onClick={() => onDateChange(1)} className="increase">
-                <i className="fas fa-chevron-right"></i>
-              </button>
-            </h2>
+            <input
+              type="date"
+              value={bookingDate}
+              onChange={onDateChange}
+            />
             <input
               type="number"
               min={1}

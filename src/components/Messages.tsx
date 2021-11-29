@@ -47,7 +47,7 @@ export const Messages = () => {
     <div className="container">
       <div className="back">
         <a href={"/admin"}>
-          <i className="fas fa-chevron-left"></i> Messages
+          <i className="fas fa-chevron-left back-arrow"></i> Messages
         </a>
       </div>
       <h2> Messages</h2>
