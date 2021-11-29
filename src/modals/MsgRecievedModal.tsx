@@ -22,13 +22,13 @@ export const MsgRecievedModal: React.FC<ModalProps> = ({ onClose, show }) => {
         <div className="modal-header">
           <h1
             className="modal-title"
-            style={{ fontSize: "80px", marginBottom: "0" }}
+            style={{ fontSize: "60px", marginBottom: "0" }}
           >
             <i className="fas fa-check-circle"></i>
           </h1>
         </div>
         <div className="modal-body">
-          <p style={{ fontSize: "35px", marginTop: "0" }}>
+          <p style={{ fontSize: "25px", marginTop: "0" }}>
             Your Message was sent successfully. Thanks.
           </p>
           <button onClick={routeChange} className="full-btn">
